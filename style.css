@@ -17,24 +17,24 @@ body {
   grid-area: sidebar;
   background-color: steelblue;
 }
-.sidebar>div {
+.sidebar > div {
   list-style-type: none;
   margin: 0;
   margin-top: 50px;
   padding: 0;
   font-size: 1.5rem;
 }
-.sidebar>div>div{
+.sidebar > div > div {
   margin: 10px 10px 0 10px;
 }
-.sidebar>h2>img{
+.sidebar > h2 > img {
   width: 45px;
 }
-.sidebar img{
+.sidebar img {
   padding-right: 10px;
   vertical-align: middle;
 }
-span{
+span,.search img {
   vertical-align: middle;
 }
 
@@ -43,18 +43,29 @@ span{
   grid-template: 1fr 1fr/ 1fr 1fr;
   place-items: center;
 }
-.profile{
+.nav img{
+  vertical-align: middle;
+}
+.profile {
   display: flex;
   justify-self: start;
+  margin-left: 8%;
 }
-.search{
+.search {
   width: 100%;
+  justify-self: start;
+  margin-left: 9%;
 }
-.search img{
-  width: 45px;
+.search img {
+  width: 35px;
+  margin-left: 15px;
 }
-.search input{
+.search input {
   width: 80%;
+  border-radius: 10px;
+  border: none;
+  background-color: gainsboro;
+  height: 30px;
 }
 .projectsdata > div,
 .announcement > div,
@@ -66,36 +77,67 @@ span{
   margin: 20px 0 0 20px;
   border-radius: 5px;
 }
-.projectsdata h3{
+.projectsdata h3 {
   margin-bottom: 5px;
 }
 
-.projectsdata p{
+.projectsdata p {
   margin-top: 5px;
 }
 .data {
   grid-area: data;
-  grid-template: 1fr 1fr/ 1fr 200px;
+  grid-template: 1fr 1fr/ 1fr 250px;
   grid-template-areas: "projects announcement" "projects trending";
-  background-color: slategray;
+  background-color: gainsboro;
   gap: 15px;
 }
 .projects {
   grid-area: projects;
 }
+.projects>h3:first-of-type{
+  margin-left: 20px;
+}
+.trending p,.announcement p{
+  font-size: small;
+}
 .announcement {
   grid-area: announcement;
   margin-right: 10px;
+}
+.announcement>h3{
+  margin-bottom: 40px;
+}
+.announcement h4, .announcement p,.trending h4,.trending p{
+  padding: 0;
+  margin: 0;
+}
+.announcement>div{
+  padding: 15px;
+}
+.announcement>div:first-of-type,.trending>div:first-of-type{
+  border-radius: 5px 5px 0 0;
+}
+.announcement>div:last-of-type,.trending>div:last-of-type{
+  border-radius: 0 0 5px 5px;
 }
 .trending {
   grid-area: trending;
   margin-right: 10px;
 }
+.trending>div{
+  display: flex;
+}
+.trending img{
+padding: 10px;
+}
+.trending h4{
+  padding-top: 12px;
+}
 .projectsdata {
   grid-template: 1fr 1fr 1fr/ 1fr 1fr;
   gap: 15px;
 }
-button{
+button {
   width: 80px;
   height: 30px;
   background-color: darkcyan;
